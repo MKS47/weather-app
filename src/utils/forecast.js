@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find the weather data, Try another search', undefined)
         } else {
             callback(undefined, {
-                weatherStatus: `Weather is ${body.current.weather_descriptions} It is currently ${body.current.temperature} degrees out. There is a ${body.current.precip}% chance of rain.`
+                weatherStatus: `Weather is ${body.current.weather_descriptions} It is currently ${body.current.temperature} degrees out with a humidity of ${body.current.humidity}. There is a ${body.current.precip}% chance of rain.`
             })
         }
     })
