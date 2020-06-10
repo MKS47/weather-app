@@ -6,7 +6,7 @@ const message = document.querySelector('.forecast-message')
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     message.textContent = 'Loading......'
-    const url = 'http://localhost:3000/weather?address=' + locationInput.value;
+    const url = '/weather?address=' + locationInput.value;
     fetch(url).then(
         (response) => {
             response.json().then((data) => {
